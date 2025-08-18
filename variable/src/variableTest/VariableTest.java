@@ -7,7 +7,7 @@ public class VariableTest {
 //		정수(int): 0
 //		실수(double): 0.0
 //		문자(char): ' '
-//		문자열(String): null, ""
+//		문자열(String): null, "" (빈 문자열)
 		
 		// 기본 자료형
 		int num1 = 10;
