@@ -77,6 +77,8 @@ public class ArrayTask1 {
 		for(int i = 0; i < 5; i++) {
 			int num = sc.nextInt();
 			
+			// min ,max가 0이 되는 것에 대한 continue 조건으로 0일 때를 빼고 계산해야 한다
+			
 			arr7[i] = num;
 			// min과 max가 같을 수도 있기 때문에 if if
 			if(arr7[i] > max) {
@@ -84,10 +86,9 @@ public class ArrayTask1 {
 			}
 			if(arr7[i] < min ) {
 				min = arr7[i];
-				System.out.println(min);
 			}
 		}
-//		System.out.print(min);
+		System.out.print(min);
       
 //      다이아
 //      사용자가 입력할 정수의 개수만큼 배열을 만든 후 정수를 입력받고 평균 구하기
