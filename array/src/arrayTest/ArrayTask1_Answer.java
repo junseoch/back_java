@@ -80,7 +80,7 @@ public class ArrayTask1_Answer {
 //      for(int i = 0; i < arData7.length; i++) {
 //         arData7[i] = sc.nextInt();
 //      }
-//      
+      
 //      min = arData7[0];
 //      max = arData7[0];
 //      
