@@ -13,27 +13,28 @@ public class MethodTask5 {
 	// 2. 어떤 값을 전달하면 홀수인지, 짝수인지, 문자열인지 확인한 결과를 반환해주는 메서드
 	// 홀수, 짝수 판별 : 정수 % 2 == 0
 	// 문자열 판별 : 문자열
-
-	// scanner로 문자열로 받음 "1"  or "홍"
-	// 문자열을 정수로 변환 -> 
+	// scanner로 문자열로 받음 "1"  or "홍"   '1' '홍'
+	// 문자열을 char로 변환 -> 
 	
-//	String printOddOrEven(int num2, String str1) {
-//		if() {
+//	String printOddOrEven(String str1) {
+//	
 //		
-//		}
 //	}
 	
 	// 3. 문자열을 입력하면 모두 대문자로 바꿔서 출력해주는 메서드
 	String stringToUpper(String stringInput) {
 		return stringInput.toUpperCase();
 	}
-	
+
+
 	// 4. 어떤 문자열을 전달하면 반대로 출력해주는 메서드
 	// 입력 예시) abcdef  0 1 2 3 4 5  +1
 	// 출력 예시) fedcba  5 4 3 2 1 0  -1
 	
 	// 문자열로 받아서 char로 형변환
 			// 인덱스 5 4 3 2 1 -1 -2
+	
+	// 인덱스 0 ~ 5  length - 1 - i
 	void printReverse(String str2) {
 		for(int i = 5 ; i < str2.length(); i--) {
 			if(i > 0) {
@@ -43,7 +44,6 @@ public class MethodTask5 {
 		}
 	}
 
-	// 5. 1~4번까지 메서드 사용
 	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -51,10 +51,10 @@ public class MethodTask5 {
 		
 		MethodTask5 mt5 = new MethodTask5();
 //		System.out.println(mt5.printNum(5));
-//		strNum = sc.next();
+		strNum = sc.next();
 //		System.out.println(mt5.printOddOrEven("홍"));
 //		stringNum = sc.next();
-//		System.out.println(mt5.stringToUpper(stringNum));
+		System.out.println(mt5.stringToUpper(stringNum));
 		mt5.printReverse("abcdef");
 	}
 }
