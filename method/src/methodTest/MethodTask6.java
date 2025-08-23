@@ -15,29 +15,20 @@ public class MethodTask6 {
 	//  'A'의 아스키 코드 : 65
 	//  65이상 97이하면 count에 누적합
 	//  아니면 누적X
-	int countLetter(String str, String s){
-		int count = 0;
-		for(int i = 0; i < str.length(); i++) {
-			
-			char c = str.charAt(i);
-			if() {
-				count++;
-			}
-			else {
-				count;
-			}
-		}
-		return count;
-	}
 	
-	public static void main(String[] args) {
-		MethodTask6 mt6 = new MethodTask6();
-		
-		Scanner sc = new Scanner(System.in);
-		String intput = sc.next();
-		String include = sc.next();
-		
-		mt6.countLetter(intput, include);
+	
+	// replace, replaceAll 메서드 사용
+	
+	int getCount(String value, char c) {
+		return value.length() - value.replaceAll(String.valueOf(c), "").length();
 	}
+	 
+	public static void main(String[] args) {
+		MethodTask6 mt = new MethodTask6();
+		int count = 0 ;
+		count = mt.getCount("abcdeaaa", 'a');
+		System.out.println(count);
+	}
+
 	
 }
