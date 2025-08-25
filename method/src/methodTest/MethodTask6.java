@@ -18,9 +18,10 @@ public class MethodTask6 {
 	
 	
 	// replace, replaceAll 메서드 사용
-	
+	// length - 1 : 마지막
 	int getCount(String value, char c) {
 		return value.length() - value.replaceAll(String.valueOf(c), "").length();
+		// 					   	"abcdeaaa".replaceAll("a", "")
 	}
 	 
 	public static void main(String[] args) {
@@ -30,5 +31,4 @@ public class MethodTask6 {
 		System.out.println(count);
 	}
 
-	
 }

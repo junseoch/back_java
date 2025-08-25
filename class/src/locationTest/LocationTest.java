@@ -22,6 +22,5 @@ public class LocationTest {
       ts.test(data);
       System.out.println(data[0]);
       
-   }
-   
+   }	
 }

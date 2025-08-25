@@ -17,10 +17,10 @@ public class SuperCar {
    int errorCount;
    
 //   스태틱 블록
-   static {
-      System.out.println("출고 축하합니다~!");
-   }
-   
+//   static {
+//      System.out.println("출고 축하합니다~!");
+//   }
+//   
 //   초기화 블록
    {
       this.password = "0000";
@@ -56,7 +56,7 @@ public class SuperCar {
       this.engine = false;
    }
    
-   
+    
    public static void main(String[] args) {
       SuperCar ferrari = new SuperCar("Ferrari", "Red", 700_000_000, "5175");      
       Scanner sc = new Scanner(System.in);
@@ -99,9 +99,7 @@ public class SuperCar {
             System.out.println("잘못 입력하셨습니다.");
             continue;
          }
-         
       }
-      
    }
    
 }

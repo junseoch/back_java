@@ -13,7 +13,12 @@ public class MethodTest {
 	}
 	
 	public static void main(String[] args) {
+		// new MethodTest(); 메서드를 사용할 준비
+		// 클래스를 RAM에 할당
+		
+		// MethodTest클래스를 정의할 수 있는 건 MethodTest 본인!
+		// 본인이 타입이 됨
 		MethodTest mt = new MethodTest();
-		mt.printFullName(null, null);
+		mt.printFullName("홍", "길동");
 	}
 }    

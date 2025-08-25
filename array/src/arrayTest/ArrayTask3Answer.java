@@ -4,13 +4,13 @@ public class ArrayTask3Answer {
 	public static void main(String[] args) {
 //		1. 1~20까지 짝수만 배열에 담고 배열안에 값에 모두 3을 더한 값으로 변경 후 출력하기
 //		짝수: 값 % 2 == 0
-//		int[] arData1 = new int[10];
-//		for(int i = 0; i < 10; i++) {
-//			arData1[i] = (i + 1) * 2;
-////			arData1[i] = arData1[i] + 3;
-//			arData1[i] += 3;
-//			System.out.println(arData1[i]);
-//		}
+		int[] arData1 = new int[10];
+		for(int i = 0; i < 10; i++) {
+			arData1[i] = (i + 1) * 2;
+//			arData1[i] = arData1[i] + 3;
+			arData1[i] += 3;
+			System.out.println(arData1[i]);
+		}
 		
 //		2. 초기값으로 10, 20, 30, 40, 50 값을 넣고 평균을 출력하기
 		int[] arData2 = {10, 20, 30, 40, 56};

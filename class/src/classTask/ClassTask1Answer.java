@@ -58,9 +58,9 @@ class Scores {
 public class ClassTask1Answer {
    public static void main(String[] args) {
       Scanner sc = new Scanner(System.in);
-      Student2 bae = null;
+      Student2 bae = null; // 값을 모름
       
-      Scores scores = new Scores();
+      Scores scores = new Scores(); // scores 객체를 새로 만듦
 //      int[] scores = new int[3];
 //      int kor = 0, eng = 0, math = 0;
       
@@ -71,7 +71,8 @@ public class ClassTask1Answer {
       scores.eng = sc.nextInt(); 
       scores.math = sc.nextInt(); 
             
-      bae = new Student2(1, scores);
+      // 입력을 받고 나서 만들어지면서 초기화 됨
+      bae = new Student2(1, scores);  // 여기서 생성자에게 값을 줌
       
       System.out.println("총 점: " + bae.total);
       System.out.println("평 균: " + bae.average);
