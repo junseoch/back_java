@@ -12,7 +12,8 @@ public class StudentTask extends PersonTask{
 	String instaId;
 	public StudentTask() {;}
 	
-	public StudentTask(String instaId) {
+	public StudentTask(String name, int age, String address, int phone, String instaId) {
+		super(name, age, address, phone);
 		this.instaId = instaId;
 	}
 

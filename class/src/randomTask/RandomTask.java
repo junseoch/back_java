@@ -8,7 +8,7 @@ import java.util.Random;
 //3. 6개를 배열로 리턴
 //4. 메인 메서드에서 사용 
 public class RandomTask {
-   
+  
    int[] getLottoNumbers() { // 배열로 리턴
       Random random = new Random();
       int[] numbers = new int[6];

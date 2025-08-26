@@ -8,13 +8,14 @@ package inheritanceTask;
 public class EmployeeTask extends PersonTask{
 	int money;
 	
-	public EmployeeTask() {
-	}
 
-	public EmployeeTask(int money) {
+	public EmployeeTask() {;}
+	public EmployeeTask(String name, int age, String address, int phone, int money) {
+		super(name, age, address, phone);
 		this.money = money;
 	}
-	
+
+
 	@Override
 	void work() {
 		System.out.println("아르바이트를 한다");

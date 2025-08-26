@@ -26,9 +26,13 @@ class Car {
 // 자식
 class SuperCar extends Car{
 	String mode;
-	public SuperCar() {;}
+	public SuperCar() {;} 
 	public SuperCar(String brand, String color, int price, String mode) {
-		super(brand, color, price); // 부모의 메서드에 00초기화
+		// 값을 알고 있을 때 -> 부모의 생성자로 초기화!
+		// 부모에게 넘김
+		// super()는 부모의 초기화 생성자를 호출함
+		// SuperCar도 모든 값을 초기화 할 수 있음
+		super(brand, color, price); 
 		this.mode = mode;
 	}
 	
@@ -50,7 +54,7 @@ public class InheritanceTask {
 		Car matiz = new Car();
 		
 		matiz.engineStart(); // 부모
-		ferrari.engineStop(); // 자식
+		ferrari.engineStop(); // 자식이 +@로 재정의 한 값이 나옴
 	}
 }
 

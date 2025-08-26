@@ -26,7 +26,7 @@ class A {
 // B는 A의 모든 것을 받음
 class B extends A {
 	public B() {
-		super();
+		super(); 
 		System.out.println(this);
 		System.out.println("자식 생성자 호출됨");
 	}
@@ -43,7 +43,7 @@ class B extends A {
 		System.out.println("두 발로 걷기");
 	}
 }
-
+ 
 public class InheritanceTest {
 	public static void main(String[] args) {
 		B b = new B(); // 자식
@@ -53,8 +53,8 @@ public class InheritanceTest {
 		b.printData(); // 자식
 		b.walk(); 
 		a.walk();
-		// 부모의 코드는 오버라이딩 되지 않음, 부모는 부모 자신의 객체
-	}
+		// 부모의 코드는 오버라이딩과 상관없음, 부모는 부모 자신의 객체
+	} 
 }
 
 

@@ -37,7 +37,7 @@ public class InheritanceTask2 {
 		PersonTask pt = new PersonTask();
 		StudentTask st = new StudentTask();
 		EmployeeTask et = new EmployeeTask();
-		
+		 
 		pt.eat();
 		st.eat();
 		et.eat();
