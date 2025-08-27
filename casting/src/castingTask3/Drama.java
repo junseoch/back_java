@@ -1,11 +1,17 @@
 package castingTask3;
 
-public class Drama extends Netflix{
+public class Drama extends Video{
 	
 	public Drama() {;}
-
-	void goods() {
-		System.out.println("굿즈");
+	public Drama(String name, int time) {
+		super(name, time);
 	}
+	
+	public void sellGoods() {
+		super.setTime(10000);
+		System.out.println(super.getTime() + "분 남음");
+	}
+
+	    
 	
 }

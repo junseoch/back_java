@@ -10,7 +10,7 @@ public class Charactor {
       System.out.println("캐릭터가 생성되었습니다.");
    }
    
-   {
+   { // 초기화 블록
       this.level = 1;
       this.hp = 10;
    }

@@ -11,9 +11,10 @@ public class BaeSeungWon {
       this.age = age;
       this.hobby = hobby;
    }
-   
+    
 //   놀고!
    void play(Friend friend) {
+	   
       if(friend instanceof Crong) {
          Crong crong = (Crong)friend;
          friend.withPlay();

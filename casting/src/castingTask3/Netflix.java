@@ -22,7 +22,7 @@ public class Netflix {
    public void setPrice(int price) {
       this.price = price;
    }
-   	
+   
    void show(Video video) {
       if(video instanceof Drama) {
 //         다운 캐스팅

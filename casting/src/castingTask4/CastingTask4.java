@@ -41,11 +41,12 @@ package castingTask4;
 public class CastingTask4 {
 	public static void main(String[] args) {
 		MarketNonMember nonmember = new MarketNonMember();
-		MarketMember member = new MarketMember(3000);
+		MarketMember member = new MarketMember("홍길동", "010-5555-4444", 3000);
 		
 		Market market = new Market();
 		Product product = new Product("상품1", 2000, 5);
 		
+		market.register(product);
 		market.sell(product, member);
 		
 		System.out.println(member.getMoney());
