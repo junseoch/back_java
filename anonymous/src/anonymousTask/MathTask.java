@@ -1,5 +1,6 @@
-package anonyMousTask;
+package anonymousTask;
 
+// 추상
 public interface MathTask {
 //   두 정수를 더해주는 메서드
    public int add(int num1, int num2);

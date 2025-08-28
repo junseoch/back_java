@@ -1,4 +1,4 @@
-package anonyMousTask;
+package anonymousTask;
 
 public interface Form {
 

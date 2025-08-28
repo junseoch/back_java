@@ -2,5 +2,6 @@ package anonymousTest;
 
 public interface Study {
 	// 추상 메서드
-	public void setTopic(String topic);
+	// 뭐 할지 모름
+	public String setTopic(String topic);
 }
