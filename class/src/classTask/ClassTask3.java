@@ -4,8 +4,12 @@ package classTask;
 // 2. 클래스로 리턴
 // 3. 메인 메서드에서 메서드 사용
 public class ClassTask3 {
-   Result getMaxAndMin(int[] arData) {
+	// 리턴타입이 Result클래스
+	// int 배열로 담음
+	
+   public Result getMaxAndMin(int[] arData) {
       Result result = new Result(arData[0], arData[0]);
+      
       for(int i = 0; i < arData.length; i++) {
          if(result.min > arData[i]) { result.min = arData[i]; };
          if(result.max < arData[i]) { result.max = arData[i]; };
@@ -17,6 +21,10 @@ public class ClassTask3 {
       ClassTask3 ct3 = new ClassTask3();
       int[] arData = {1, 3, 5, 9, 0};
       Result result = ct3.getMaxAndMin(arData);
+//      System.out.println(result[0]);
+//      System.out.println(result[1]);
+      // 	배열로 하면 뭐가 최소, 최대인지 모름
+      // 객체.필드
       System.out.println(result.min);
       System.out.println(result.max);
    }

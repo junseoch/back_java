@@ -51,6 +51,8 @@ public class ClassTask1 {
 		 st1.english = input2;
 		 st1.math = input3;
 		
+		 
+		 
 		 st1.sum();
 		 st1.average();
 	}

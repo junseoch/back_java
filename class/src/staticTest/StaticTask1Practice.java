@@ -24,6 +24,7 @@ class Employee2{
 
 	void printCompnayMoney() {
 		System.out.println(money);
+		
 	}
 }
 

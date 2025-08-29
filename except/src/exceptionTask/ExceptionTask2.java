@@ -1,5 +1,6 @@
 package exceptionTask;
 
+import java.util.Map;
 import java.util.Scanner;
 
 // 사용자에게 입력을 받았을 때 특수문자 중 !@#를 사용하면 오류를 발생시키는 로직
@@ -13,6 +14,8 @@ public class ExceptionTask2 {
 	   
 	   System.out.println("메세지 입력");
 	   message = sc.nextLine();
+	   
+	   // 반복되기 때문에 검사 메서드를 만들어야
 	   
 	   try {
 		if(message.contains("!")) {
@@ -32,8 +35,6 @@ public class ExceptionTask2 {
 		System.out.println(e.getMessage());
 		System.out.println(e.getClass());
 	}
-	   
-	   
 	   
    }
 }

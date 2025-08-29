@@ -17,8 +17,11 @@ public class MethodPractice1 {
 	public static void main(String[] args) {
 		// 메서드를 쓰고 싶으면 클래스부터 찾아라!
 		
+		MethodPractice1 mp1 = new MethodPractice1();
 		new MethodPractice1().printNum(0, 0, 0);
 		
+		
+		mp1.addlastNameFirstName(null, null);
 		
 	}
 	

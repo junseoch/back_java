@@ -1,6 +1,5 @@
 package inheritanceTask;
 
-
 //StudentTask
 //인스타아이디
 //각 메서드 출력

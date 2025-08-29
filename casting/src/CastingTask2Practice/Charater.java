@@ -12,6 +12,6 @@ public class Charater {
 
 
 	void hunt(Monster monster) { // 자식들을 공통된 부모에 넣음 : 업케스팅
-		monster 
+
 	}
 }
