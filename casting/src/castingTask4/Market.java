@@ -111,7 +111,7 @@ public class Market {
    };
    
    public void sell(Customer customer, String productName, int stock) {
-      Product product = new Product(productName, stock);
+      Product product = new Product(productName, stock, stock);
 //      상품이 있다면 판매
       if(this.checkProduct(product)) {
          Product foundProduct = null;
