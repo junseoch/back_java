@@ -1,54 +1,54 @@
 package lambdaTest;
 
 public class CalcResult {
-	    private int sum;
-	    private int sub;
-	    private int mul;
-	    private double div;
-	    
-	    public CalcResult() {
-			// TODO Auto-generated constructor stub
-		}
+	
+	private int sumResult;
+	private double divResult;
+	private double mulResult;
+	private int subResult;
+	
+	public CalcResult() {
+	}
 
-		public CalcResult(int sum, int sub, int mul, double div) {
-			this.sum = sum;
-			this.sub = sub;
-			this.mul = mul;
-			this.div = div;
-		}
+	public CalcResult(int sumResult, double divResult, double mulResult, int subResult) {
+		this.sumResult = sumResult;
+		this.divResult = divResult;
+		this.mulResult = mulResult;
+		this.subResult = subResult;
+	}
 
-		public int getSum() {
-			return sum;
-		}
+	public int getSumResult() {
+		return sumResult;
+	}
 
-		public void setSum(int sum) {
-			this.sum = sum;
-		}
+	public void setSumResult(int sumResult) {
+		this.sumResult = sumResult;
+	}
 
-		public int getSub() {
-			return sub;
-		}
+	public double getDivResult() {
+		return divResult;
+	}
 
-		public void setSub(int sub) {
-			this.sub = sub;
-		}
+	public void setDivResult(double divResult) {
+		this.divResult = divResult;
+	}
 
-		public int getMul() {
-			return mul;
-		}
+	public double getMulResult() {
+		return mulResult;
+	}
 
-		public void setMul(int mul) {
-			this.mul = mul;
-		}
+	public void setMulResult(double mulResult) {
+		this.mulResult = mulResult;
+	}
 
-		public double getDiv() {
-			return div;
-		}
+	public int getSubResult() {
+		return subResult;
+	}
 
-		public void setDiv(double div) {
-			this.div = div;
-		}
-	    
-	    
-		
+	public void setSubResult(int subResult) {
+		this.subResult = subResult;
+	}
+	
+	
+	
 }

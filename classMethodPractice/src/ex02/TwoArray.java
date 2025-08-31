@@ -11,5 +11,26 @@ package ex02;
 
 
 public class TwoArray {
-
+	// 필드가 없으니 기본 생성자만
+	public TwoArray() {;}
+	
+	public static void main(String[] args) {
+		
+		// 방법 1
+		int[] arrData = new int[12];
+		
+		// for -> 1부터 12까지
+		// 
+		
+		for(int i = 0; i < arrData.length; i++) {
+			System.out.printf("%d ",arrData[i] = i + 1);
+			if((i + 1) % 4 == 0) {
+				System.out.println("");
+			}
+			
+		}
+		
+		
+	}
+	
 }

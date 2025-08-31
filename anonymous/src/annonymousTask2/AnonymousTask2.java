@@ -19,7 +19,6 @@ public class AnonymousTask2 {
 			}
 			
 //			2. 문자열을 입력받고 소문자는 대문자로, 대문자는 소문자로 바꿔주는 메서드
-			
 			// toUpperCase
 			// toLowerCase
 			// 'A' : 65  ~ 'Z' : 90

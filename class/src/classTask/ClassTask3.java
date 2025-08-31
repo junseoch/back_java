@@ -8,22 +8,23 @@ public class ClassTask3 {
 	// int 배열로 담음
 	
    public Result getMaxAndMin(int[] arData) {
+	   // 이 메서드의 결과를 클래스로 리턴하기 위해서 Result클래스를 객체화 함
       Result result = new Result(arData[0], arData[0]);
       
       for(int i = 0; i < arData.length; i++) {
          if(result.min > arData[i]) { result.min = arData[i]; };
          if(result.max < arData[i]) { result.max = arData[i]; };
       }
-      return result;
+      return result; // min, max 필드에 결과 값들을 넣고 그 result 객체를 리턴
    }
    
    public static void main(String[] args) {
       ClassTask3 ct3 = new ClassTask3();
       int[] arData = {1, 3, 5, 9, 0};
-      Result result = ct3.getMaxAndMin(arData);
-//      System.out.println(result[0]);
+      Result result = ct3.getMaxAndMin(arData); // getMaxAndMin 메서드에 arData를 보내서 결과를 돌려받고 result 객체에 저장
+//      System.out.println(result[0]);	
 //      System.out.println(result[1]);
-      // 	배열로 하면 뭐가 최소, 최대인지 모름
+      // 배열로 하면 뭐가 최소, 최대인지 모름
       // 객체.필드
       System.out.println(result.min);
       System.out.println(result.max);
