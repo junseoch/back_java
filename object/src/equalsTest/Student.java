@@ -51,7 +51,9 @@ public class Student {
 	public int hashCode() {
 		return Objects.hash(id);
 	}
-
+	
+	// 단축키 : Alt + Shift + S + h
+	// id 비교만 필요하기 때문에 id만 체크 
 	// DB에서온 데이터
 	@Override
 	public boolean equals(Object obj) {
@@ -67,16 +69,15 @@ public class Student {
 	
 	
 	public static void main(String[] args) {
-		
 		Student student = new Student(1, "홍길동", 20);
-		
 		// 도서관
+		// 클래스의 equals는 내가 재정의하지 않으면 내가 선언한 적이 없으니 부모(object)에게 받는다
+		// object에서는 주소를 비교
 		if(student.equals(new Student(1, "홍길동", 20))) {
 			System.out.println("책 대여 완료");
 		} else {
 			System.out.println("도난 신고");
 		}
-		
 	}
 
 	
