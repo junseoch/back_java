@@ -28,6 +28,13 @@ public class Calculator {
 		return result;
 	}
 	
-	
+	public static void main(String[] args) {
+		
+		Calculator calculator = new Calculator();
+		
+		System.out.println(calculator.calcNum(5.33)); 
+		
+		
+	}
 	
 }

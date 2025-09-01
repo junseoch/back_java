@@ -21,7 +21,7 @@ public class LambdaTask {
 		LambdaInter2 labdaInter2 = (num1, num2) -> {
 			// 객체를 만들어서 calcResult를 리턴해야 함
 			CalcResult calcResult = new CalcResult();
-			// calcResult객체를 변수처럼 쓸 수 있음
+			// calcResult 객체를 변수처럼 쓸 수 있음
 			
 			// 연산한 결과를 각각 calcResult에 전달해야 함
 			calcResult.setSumResult(num1 + num2);

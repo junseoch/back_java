@@ -7,8 +7,7 @@ public class CalcResult {
 	private double mulResult;
 	private int subResult;
 	
-	public CalcResult() {
-	}
+	public CalcResult() {;}
 
 	public CalcResult(int sumResult, double divResult, double mulResult, int subResult) {
 		this.sumResult = sumResult;
