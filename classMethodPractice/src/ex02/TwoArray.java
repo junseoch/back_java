@@ -17,17 +17,27 @@ public class TwoArray {
 	public static void main(String[] args) {
 		
 		// 방법 1
-		int[] arrData = new int[12];
+//		int[] arrData = new int[12];
+//		
+//		
+//		// for -> 1부터 12까지
+//		System.out.println("배열 행 길이 : 3");
+//		System.out.println("배열 열 길이 : 4");
+//		
+//		for(int i = 0; i < arrData.length; i++) {
+//			System.out.printf("%d ",arrData[i] = i + 1);
+//			if((i + 1) % 4 == 0) {
+//				System.out.println("");
+//			} 
+//		}
 		
-		// for -> 1부터 12까지
-		System.out.println("배열 행 길이 : 3");
-		System.out.println("배열 열 길이 : 4");
+		int[] arrData = new int[12];
 		
 		for(int i = 0; i < arrData.length; i++) {
 			System.out.printf("%d ",arrData[i] = i + 1);
 			if((i + 1) % 4 == 0) {
 				System.out.println("");
-			} 
+			}
 		}
 		
 	}

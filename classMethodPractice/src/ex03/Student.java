@@ -11,7 +11,6 @@ public class Student extends Person{
 		super(name, age, job, hobby);
 		this.number = number;
 	}
-
 	
 	public int getNumber() {
 		return number;
@@ -67,7 +66,6 @@ public class Student extends Person{
 		return student.getNumber() == this.getNumber();
 		       // 가져온 number           내 number
 	}
-	
 	
 	public static void main(String[] args) {
 		
