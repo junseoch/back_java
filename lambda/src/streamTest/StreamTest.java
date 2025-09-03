@@ -41,6 +41,10 @@ public class StreamTest {
 		// datas 홀수만 출력하기
 		datas.stream().filter((n) -> (n % 2 == 1)).forEach(System.out::println);
 		
+		// map, filter, forEach
+		// map : 값을 수정할 때
+		// filter : 그 조건에 해당하는 값을 리턴
+		// forEach : 반복하면서 그냥 출력하는 기능 -> 리턴
 		
 		datas.stream().map((n) -> {
 			return n + 1;
@@ -49,9 +53,7 @@ public class StreamTest {
 //		.stream(): 컬렉션을 Stream 객체로 변경
 //		.chars() : 문자열을 stream 문법으로 변경
 		"ABCD".chars().forEach(System.out::print);
-		
-		System.out.println("");
-		
+				
 		"ABCD".chars().forEach((c) -> {
 			System.out.println((char)c);
 		});

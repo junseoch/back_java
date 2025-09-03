@@ -31,20 +31,20 @@ public class HashMapTask1 {
 		// value들만 ArrayList로 변경
 		
 		System.out.println(mapData);
-		
+		System.out.println(mapData.values());
 		System.out.println(new ArrayList(mapData.values())); 
 		
 		
 //		// entry로 묶음
-//		Iterator<Entry<String, Object>> iterData = mapData.entrySet().iterator();
-//		ArrayList
-//		
-////		ArrayList<String> ArrayListData = new ArrayList<String>();
-//		
-//			while(iterData.hasNext()) {
-//				Entry<String, Object> entry = iterData.next();
-//				ArrayListData.add(entry.getValue());  // add해서 ArrayListData
-//			}
+		Iterator<Entry<String, Object>> iterData = mapData.entrySet().iterator();
+		
+		
+//		ArrayList<String> ArrayListData = new ArrayList<String>();
+		
+			while(iterData.hasNext()) {
+				Entry<String, Object> entry = iterData.next();
+				ArrayListData.add(entry.getValue());  // add해서 ArrayListData
+			}
 		
 		}
 
