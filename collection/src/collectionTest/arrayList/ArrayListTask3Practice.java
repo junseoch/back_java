@@ -6,11 +6,11 @@ public class ArrayListTask3Practice {
    public static void main(String[] args) {
       ArrayList<Product> products = new ArrayList<Product>();
       
-      products.add(new Product(1L, "컴퓨터", 800000, 20));
-      products.add(new Product(2L, "책상", 150000, 100));
-      products.add(new Product(3L, "마우스", 50000, 15));
-      products.add(new Product(4L, "모니터", 300000, 150));
-      products.add(new Product(5L, "키보드", 30000, 80));
+//      products.add(new Product(1L, "컴퓨터", 800000, 20));
+//      products.add(new Product(2L, "책상", 150000, 100));
+//      products.add(new Product(3L, "마우스", 50000, 15));
+//      products.add(new Product(4L, "모니터", 300000, 150));
+//      products.add(new Product(5L, "키보드", 30000, 80));
       
 //      System.out.println(products);
       

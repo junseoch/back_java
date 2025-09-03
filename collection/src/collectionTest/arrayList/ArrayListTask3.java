@@ -7,11 +7,11 @@ public class ArrayListTask3 {
 		
 		ArrayList<Product> products = new ArrayList<Product>();
 		
-		products.add(new Product(1L, "컴퓨터", 800000, 20));
-		products.add(new Product(2L, "책상", 30000, 110));
-		products.add(new Product(3L, "마우스", 50000, 20));
-		products.add(new Product(4L, "의자", 300000, 120));
-		products.add(new Product(5L, "키보드", 200000, 20));
+//		products.add(new Product(1L, "컴퓨터", 800000, 20));
+//		products.add(new Product(2L, "책상", 30000, 110));
+//		products.add(new Product(3L, "마우스", 50000, 20));
+//		products.add(new Product(4L, "의자", 300000, 120));
+//		products.add(new Product(5L, "키보드", 200000, 20));
 		
 //		System.out.println(products);
 		

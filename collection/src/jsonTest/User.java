@@ -1,25 +1,24 @@
-package collectionTest.arrayList;
+package jsonTest;
 
 import java.util.Objects;
 
-public class Product {
-	
-//	이름, 가격, 재고
+public class User {
+
+//	id, name, age, job
 	
 	private Long id;
 	private String name;
-	private int price;
-	private int stock;
+	private int age;
+	private String job;
 	
-	public Product() {;}
-
-	public Product(Long id, String name, int price, int stock) {
-		super();
+	public User() {;}
+	public User(Long id, String name, int age, String job) {
 		this.id = id;
 		this.name = name;
-		this.price = price;
-		this.stock = stock;
+		this.age = age;
+		this.job = job;
 	}
+	
 
 	public Long getId() {
 		return id;
@@ -37,27 +36,25 @@ public class Product {
 		this.name = name;
 	}
 
-	public int getPrice() {
-		return price;
+	public int getAge() {
+		return age;
 	}
 
-	public void setPrice(int price) {
-		this.price = price;
+	public void setAge(int age) {
+		this.age = age;
 	}
 
-	public int getStock() {
-		return stock;
+	public String getJob() {
+		return job;
 	}
 
-	public void setStock(int stock) {
-		this.stock = stock;
+	public void setJob(String job) {
+		this.job = job;
 	}
-	
-	
 
 	@Override
 	public String toString() {
-		return "Product [id=" + id + ", name=" + name + ", price=" + price + ", stock=" + stock + "]";
+		return "User [id=" + id + ", name=" + name + ", age=" + age + ", job=" + job + "]";
 	}
 
 	@Override
@@ -73,12 +70,9 @@ public class Product {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Product other = (Product) obj;
+		User other = (User) obj;
 		return Objects.equals(id, other.id);
 	}
-
-	
-
 	
 	
-}	
+}

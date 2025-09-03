@@ -10,21 +10,28 @@ public class ArrayListTask2 {
 //		a~z까지 문자열로 ArrayList에 추가하기
 //		"a" -> 'a'  -> 97
 //		"z" -> 'z'  -> 122
-//		char로 변환한 숫자가 97~122까지 들어가도록 반복
-		
 		
 		// a : 97  z : 122
-//					    97
-		
-		String str = "a";
 		
 		ArrayList<String> datas = new ArrayList<String>();
 		
 		for(int i = 0; i < 26; i++) {
-			datas.add(String.valueOf('a' + i));
+			 datas.add(String.valueOf((char)('a' + i))); 
 		}
-		
-		
+		 System.out.println(datas);
+		 
+		 for(String str : datas) {
+ 			 System.out.println(str);
+		 }
+		 
+		 for(int i = 0; i < datas.size(); i++) {
+			 if(i % 2 == 1) {
+				 System.out.println(datas.get(i).toUpperCase());
+			 }
+			 else {
+				 System.out.println(datas);
+			 }
+		 }
 		 
 	}
 }
