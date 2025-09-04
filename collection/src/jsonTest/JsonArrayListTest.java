@@ -31,12 +31,15 @@ public class JsonArrayListTest {
 		users.add(user5);
 		
 		System.out.println(users);
-		System.out.println();
 		
 //		반복문을 돈다
-//		생성자를 이용해서 JSONOject 객체화(User)
+//		생성자를 이용해서 JSONOject 객체화(User 클래스)
 //		JSONArray에 하나씩 put
+		
+		// 반복문 돌면서 JSONObject로 바꿔서 JSONArray에 넣어야 함!	
       
+		// 초기화를 시킬 때도 생성자로 초기화 함
+		// 필요한 값들을 넘길 때 JSON으로 바꾸고 싶다면 생성자를 이용해서 초기화 시켜야 함
 		for(int i = 0; i < users.size(); i++) {
 			usersJSON.put(new JSONObject(users.get(i)));
 		}
@@ -44,13 +47,14 @@ public class JsonArrayListTest {
 		System.out.println(usersJSON);
 		
 		users.forEach((data) -> {
-			System.out.println(data);
+//			System.out.println(data);
 		});
 		
 		users.stream().map((data) -> data);
 		
-		users.stream().map(null);
-		
+		users.stream().map((data) -> new JSONObject(data)).forEach((json) -> {
+			usersJSON.put(json);
+		});
 		
 	}
 }

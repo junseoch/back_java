@@ -1,63 +1,37 @@
 package streamTest;
 
 import java.util.ArrayList;
-import java.util.stream.IntStream;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class StreamTest {
-	
-		static public  void printOdd() {
-			
-		}
-
 	public static void main(String[] args) {
-//		0 ~ 9
-		ArrayList<Integer> datas = new ArrayList<Integer>();
-		IntStream.rangeClosed(0, 10).forEach((n) -> {
-			datas.add(n);
-		});
-//		
-//		IntStream
-//		정수형 문법으로 stream을 쓰겠다
-//		.range(시작, 끝) : 마지막을 포함하지 않는다
-//		.rangeClosed(시작, 끝) : 마지막을 포함한다
+//		.sorted() : 오름차순 정렬
+		ArrayList<Integer> numbers = new ArrayList<Integer>(Arrays.asList(1, 10, 6, 4, 8));
+		numbers.stream().sorted().forEach(System.out::println );
+		numbers.stream().sorted(Collections.reverseOrder()).forEach(System.out::println );
 		
-//		System.out.println(datas);
+//		.collect() : 결과를 다양한 타입으로 리턴
+		ArrayList<Integer> numbers2 = new ArrayList<Integer>(Arrays.asList(1, 10, 6, 4, 8));
 		
-//		1~5까지 스트림 문법으로 출력하기
-//		IntStream.rangeClosed(1, 5).forEach((n) -> {
-//			datas.add(n);
-//		});
-//		System.out.println(datas);
-		
-//		참조형 문법
-//		.(소속 :: 메서드명)
-//		IntStream.rangeClosed(1, 5).forEach(System.out::println);
-		
-		System.out.println(datas);
-		
-		// datas 짝수만 출력하기
-		datas.forEach((n) -> { if(n % 2 == 0) { System.out.println(n); } });
-		
-		// datas 홀수만 출력하기
-		datas.stream().filter((n) -> (n % 2 == 1)).forEach(System.out::println);
-		
-		// map, filter, forEach
-		// map : 값을 수정할 때
-		// filter : 그 조건에 해당하는 값을 리턴
-		// forEach : 반복하면서 그냥 출력하는 기능 -> 리턴
-		
-		datas.stream().map((n) -> {
-			return n + 1;
-		}).forEach(System.out::println);
+		// 내부적으로는 업케스팅 된 것
+		List<Integer> newList = numbers2
+				.stream()
+				.map((n) -> n * 10)
+				.collect(Collectors.toCollection(ArrayList::new)); // List -> ArrayList로 바
 
-//		.stream(): 컬렉션을 Stream 객체로 변경
-//		.chars() : 문자열을 stream 문법으로 변경
-		"ABCD".chars().forEach(System.out::print);
-				
-		"ABCD".chars().forEach((c) -> {
-			System.out.println((char)c);
-		});
+//		문자열로 결과 타입을 변경
+		String newString = numbers2
+				.stream()
+				.map(String::valueOf)
+				.collect(Collectors.joining(", ")); // 어떤 타입으로 바꿀 것인가
+		
+		System.out.println(newString);
+		System.out.println(newList);
+		
+//		List가 부모
 		
 	}
-	
 }

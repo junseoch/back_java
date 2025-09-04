@@ -17,6 +17,7 @@ public class JsonTest {
 		mapData.put("lng", "-34.461");
 		
 		// 객체화
+		
 		JSONObject json = new JSONObject(mapData);
 		System.out.println(json);
 		
