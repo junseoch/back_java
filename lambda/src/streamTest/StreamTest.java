@@ -20,7 +20,7 @@ public class StreamTest {
 		List<Integer> newList = numbers2
 				.stream()
 				.map((n) -> n * 10)
-				.collect(Collectors.toCollection(ArrayList::new)); // List -> ArrayList로 바
+				.collect(Collectors.toCollection(ArrayList::new)); // List -> ArrayList로 바꿈
 
 //		문자열로 결과 타입을 변경
 		String newString = numbers2
