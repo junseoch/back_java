@@ -26,12 +26,14 @@ public class CollectorPractice {
 		ArrayList<String> datas2 = new ArrayList<String>(Arrays.asList("Kim", "Lee", "Song", "Choi", "Na"));
 		
 		datas2.stream().filter(n -> n.length() >= 3).collect(Collectors.toCollection(ArrayList::new));
-		
 		System.out.println(datas2);
 		
-//		Kim
-//		Park
-//		Choi
+//		3. 문자열 "ABCDEF"를 문자 단위로 쪼개서 ArrayList에 담아라
+		ArrayList<String> datas3 = new ArrayList<String>();
+		datas3.add("ABCDEF");
+		
+//		4. 
+		
 		
 	}
 	

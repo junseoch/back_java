@@ -66,7 +66,6 @@ public class StreamTask4 {
 	    		  .map((user) -> user.getId())
 	    		  .collect(Collectors.toCollection(ArrayList::new));
 	      			
-	      
 	      System.out.println(members);
 	      System.out.println(hobbyIds);
 	      
