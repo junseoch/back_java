@@ -26,12 +26,13 @@ public class StreamTask5 {
 //	      사이즈 출력 시 6개
 //	      하나씩 짤라서 ArrayList 들고와야 함
 	      
+	      String[]
 	      members.stream()
 	      .filter((n) -> n.getHobby().split("_").length == 2)
 	      .map(n -> n.getHobby())
+	      .collect(Collectors.toCollection(ArrayList::new))
 	      .forEach(n -> System.out.print(n));
 	      
-
 	      
 //	      .collect(Collectors.toCollection(ArrayList::new))
 	      

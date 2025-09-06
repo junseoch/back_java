@@ -1,5 +1,6 @@
 package streamTask;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.stream.Collectors;
@@ -24,6 +25,14 @@ public class StreamTask2Answer {
          .sum(); // int
       
       
+      // 1부터 100까지 홀수만 ArrayList 담아서 출력
+      ArrayList<Integer> data = new ArrayList<Integer>();
+      
+      IntStream.rangeClosed(1, 100).filter((n) -> n % 2 == 1).forEach((n) -> data.add(n));
+      
+      System.out.println(data);
+      
+      
 //      Stream<T>
 //      .mapToObj(): IntStream -> Stream<T>
 //      .mapToInt(): Stream<T> -> IntStream
@@ -31,7 +40,6 @@ public class StreamTask2Answer {
 //      .mapToLong(Long::longValue): Long -> long
 //      .mapToDouble(Double::doubleValue): Double -> double
       
-
       
    }
 }
