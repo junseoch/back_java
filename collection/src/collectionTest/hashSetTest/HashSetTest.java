@@ -9,7 +9,6 @@ public class HashSetTest {
 	public static void main(String[] args) {
 		HashSet<String> mbtiType = new HashSet<String>();
 		
-		
 		mbtiType.add("ISTP");
 		mbtiType.add("ISTJ");
 		mbtiType.add("ESFJ");
@@ -27,13 +26,12 @@ public class HashSetTest {
 //			if(mbti.equals("ISTP")) {
 //				System.out.println(mbti);
 //				break;
-//			}
+//			} 
 //		}
 		
-		while(iter.hasNext()) { // 손에 잡히는 값이 있는지 없는지 -> 있을 때 while문 실행
-			String mbti = iter.next();
-			if(mbti.equals("ISTP")) {
-				System.out.println(mbti);
+		while(iter.hasNext()) {
+			if(iter.next().equals("ISTP")){
+				System.out.println(iter.next());
 				break;
 			}
 		}
@@ -43,7 +41,6 @@ public class HashSetTest {
 		ArrayList<Integer> datas = new ArrayList<Integer>(Arrays.asList(10, 20, 30, 40, 10, 10));
 		
 //			new HashSet<Integer>(datas); Set에 ArrayList 객체를 넣음
-			
 											
 			datas = new ArrayList<Integer>(new HashSet<Integer>(datas));
 		

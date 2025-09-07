@@ -2,76 +2,73 @@ package streamTask;
 
 import java.util.Objects;
 
-// 이름 , 취미, 소개
-public class Member {
+// 필드 구성 : 이름, 취미, 소개
+// 1. 필드 구성
+// 2. private 붙이기
+// 3. 기본 생성자, 초기화 생성자
+// 4. getter, setter
+// 5. toString 재정의
+// 6. HashCode, Equals 재정의
 
+public class Member {
 	private Long id;
 	private String name;
 	private String hobby;
-	private String introduce;
+	private String introduction;
 	private static Long seq;
 	
-	// 초기 1번
-	// 
+//	최초 1번
 	static {
 		seq = 0L;
 	}
 	
-	// 생성자가 호출될 때 마다
+//	생성자가 호출될 때 마다
 	{
 		this.id = seq++;
 	}
 	
 	public Member() {;}
-
-	public Member(String name, String hobby, String introduce) {
+	public Member(String name, String hobby, String introduction) {
 		this.name = name;
 		this.hobby = hobby;
-		this.introduce = introduce;
+		this.introduction = introduction;
 	}
-
+	
 	public Long getId() {
 		return id;
 	}
-
 	public void setId(Long id) {
 		this.id = id;
 	}
-
 	public String getName() {
 		return name;
 	}
-
 	public void setName(String name) {
 		this.name = name;
 	}
-
 	public String getHobby() {
 		return hobby;
 	}
-
 	public void setHobby(String hobby) {
 		this.hobby = hobby;
 	}
-
-	public String getIntroduce() {
-		return introduce;
+	public String getIntroduction() {
+		return introduction;
 	}
-
-	public void setIntroduce(String introduce) {
-		this.introduce = introduce;
+	public void setIntroduction(String introduction) {
+		this.introduction = introduction;
 	}
-
+	
 	@Override
 	public String toString() {
-		return "Member [id=" + id + ", name=" + name + ", hobby=" + hobby + ", introduce=" + introduce + "]";
+		return "Member [id=" + id + ", name=" + name + ", hobby=" + hobby + ", introduction=" + introduction + "]";
 	}
-
+	
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
 	}
-
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -83,6 +80,16 @@ public class Member {
 		Member other = (Member) obj;
 		return Objects.equals(id, other.id);
 	}
-	
-	
 }
+
+
+
+
+
+
+
+
+
+
+
+
