@@ -64,17 +64,22 @@ public class StreamTask4Answer {
 			.map(user -> user.getId())
 			.collect(Collectors.toCollection(ArrayList::new));
 		
-	
+	System.out.println(hobbyIndexs);
 		
 //		5) hobbyIds에 존재하는 id와 같은 id를 가진 members의 데이터 소개를 출력하기
 //		hobbyIds
+	
 		hobbyIndexs
-			.stream()
-			.mapToInt(Long::intValue) // Long -> int - IntStream
-			.mapToObj(Integer::valueOf) // int -> Integer - Stream<Integer>
-			.map(i -> members.get(i))
-			.map(u -> u.getIntroduction())
-			.forEach(System.out::println);
+		.stream()
+		.mapToInt(Long::intValue) // Long -> int - IntStream
+		.mapToObj(Integer::valueOf) // int -> Integer - Stream<Integer>
+		.map(i -> members.get(i))
+		.map(u -> u.getIntroduction())
+		.forEach(System.out::println);
+		
+		
+		
+
 		
 //		6) 소개를 가장 길게 쓴 사용자의 정보를 문자열로 출력하기
 //		출력 예시)

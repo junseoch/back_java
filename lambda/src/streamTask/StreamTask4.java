@@ -103,13 +103,13 @@ public class StreamTask4 {
 	      
 	      // n
 	      // max 
-	      
+//	      
 //	      int max;
-//		members.stream().map((n) -> n.getIntroduce().length())
-//	      .map((n) -> n > );
-	    
+//	      members.stream().map((n) -> n.getIntroduce().length())
+//	      .map((n) -> n > 2);
+//	    
 //	      members.stream().reduce((a, b) -> a.getIntroduce() > b.getIntroduce() ? );
-	      
+//	      
 
 //	      최대 길이
 	      
