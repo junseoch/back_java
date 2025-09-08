@@ -16,7 +16,6 @@ public class StreamTask2Answer {
 	   datas1.stream().mapToInt(Integer::intValue).sum();
 	   
 	   
-	   
 //      ArrayList<Integer> datas1 = new ArrayList<Integer>(Arrays.asList(10, 20, 30, 40, 50, 60));
 //      datas1.stream().mapToInt(Integer::intValue).sum();
 	   	
