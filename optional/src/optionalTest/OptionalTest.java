@@ -44,6 +44,10 @@ public class OptionalTest {
 //			throw new NoSearchException("유저를 찾을 수 없습니다");
 //		});
 		
+//		User user = foundUser.orElseThrow(() -> {
+//			throw new NoSearchException("유저를 찾을 수 없습니다");
+//		});
+		
 		User user;
 		try {
 			user = foundUser.orElseThrow(() -> {
@@ -56,7 +60,7 @@ public class OptionalTest {
 //		boolean
 		foundUser.map(User::getId).isPresent();
 		
-		// ifPresent() : 값이 있을 땜만 해당 로직을 수행
+		// ifPresent() : 값이 있을 때만 해당 로직을 수행
 		// 값이 없을 때는 아무것도 안 함 값이 있으면 그 내부 로직을 실행
 		optionalTest.findById(100L).map(User::getUserEmail).ifPresent(System.out::print);
 		

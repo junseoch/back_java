@@ -8,7 +8,6 @@ public class ATM implements Runnable{
 	// 쓰레드가 run에 달라붙어서 작업을 함
 	
 	
-	
 	@Override
 	public void run() {
 		for(int i = 0; i < 5; i++) {
