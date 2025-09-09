@@ -9,7 +9,6 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 import java.util.Scanner;
 
-
 public class Client02 {
 	public static void main(String[] args) {
 		
@@ -22,16 +21,19 @@ public class Client02 {
 //		"localhost"
 		
 		try {
+//			내 IP, 7777포트로 클라이언트 서버를 열겠다
 			socket = new Socket("localhost", 7777); // 내 IP, 7777포트
 			
 			in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 			out = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
 			
+			// 클라이언트에서 서버로 보내거나 받을 데이터의 크기를 모르기 때문에 while문
 			while(true) {
 				
 				System.out.println("클라이언트에서 서버로 데이터 보내기 >>");
 				String outMessage = sc.nextLine();
 				
+//				outMessage : 클라이언트에서 서버로 보낼 메세지
 				out.write(outMessage + "\n");
 				out.flush();
 				

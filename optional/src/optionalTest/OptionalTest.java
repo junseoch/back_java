@@ -35,7 +35,6 @@ public class OptionalTest {
 		// 유저가 없으면 throw로 에러를 날리겠다
 		// 유저가 있으면 그냥 유저를 주겠다
 		
-		
 		// 실무에서 가장 많이 쓰이는 null 처리
 		// user가 null이 아니면 통째로가 user
 		// null이면 throw
