@@ -22,7 +22,7 @@ public class Client02 {
 //		"localhost"
 		
 		try {
-			socket = new Socket("localhost", 7777);
+			socket = new Socket("localhost", 7777); // 내 IP, 7777포트
 			
 			in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 			out = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
