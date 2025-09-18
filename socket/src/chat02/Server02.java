@@ -55,7 +55,6 @@ public class Server02 {
 				out.flush();
 			}
 			
-			
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {

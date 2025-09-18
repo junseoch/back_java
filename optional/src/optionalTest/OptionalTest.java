@@ -16,7 +16,7 @@ public class OptionalTest {
 //	if문에 한 번이라도 들어가지 않았다면 null이 리턴
 //	NPE 발생
 //	🎯강조 : 반드시 리턴 타입에만 Optional을 사용하고, 단일 객체만 감싼다.
-//	나쁜 예시 Optional
+
 	public Optional<User> findById(Long id) {
 		User user = null;
 		for(User userInDb: users) {

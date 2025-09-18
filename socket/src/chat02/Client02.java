@@ -63,8 +63,6 @@ public class Client02 {
 				e.printStackTrace();
 			}
 			
-			
-			
 		}
 		
 	}
