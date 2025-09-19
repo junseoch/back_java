@@ -11,6 +11,7 @@ public class MemberVO {
 	private String memberAddress;
 	
 	public MemberVO() {;}
+	
 	public MemberVO(Long id, String memberEmail, String memberPassword, String memberName, Integer memberAge,
 			String memberAddress) {
 		this.id = id;
@@ -20,7 +21,6 @@ public class MemberVO {
 		this.memberAge = memberAge;
 		this.memberAddress = memberAddress;
 	}
-
 
 	public Long getId() {
 		return id;
@@ -71,8 +71,14 @@ public class MemberVO {
 	}
 
 	@Override
+	public String toString() {
+		return "MemberVO [id=" + id + ", memberEmail=" + memberEmail + ", memberPassword=" + memberPassword
+				+ ", memberName=" + memberName + ", memberAge=" + memberAge + ", memberAddress=" + memberAddress + "]";
+	}
+
+	@Override
 	public int hashCode() {
-		return Objects.hash(id, memberAddress, memberAge, memberEmail, memberName, memberPassword);
+		return Objects.hash(id);
 	}
 
 	@Override
@@ -84,10 +90,9 @@ public class MemberVO {
 		if (getClass() != obj.getClass())
 			return false;
 		MemberVO other = (MemberVO) obj;
-		return Objects.equals(id, other.id) && Objects.equals(memberAddress, other.memberAddress)
-				&& Objects.equals(memberAge, other.memberAge) && Objects.equals(memberEmail, other.memberEmail)
-				&& Objects.equals(memberName, other.memberName) && Objects.equals(memberPassword, other.memberPassword);
+		return Objects.equals(id, other.id);
 	}
+	
 	
 	
 	
