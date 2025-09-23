@@ -1,4 +1,4 @@
-package castingcast;
+package castingtask;
 
 public class CastingTest {
 	public static void main(String[] args) {

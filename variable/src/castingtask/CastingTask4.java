@@ -1,4 +1,4 @@
-package castingcast;
+package castingtask;
 
 public class CastingTask4 {
 //	String.valueOf(값);
