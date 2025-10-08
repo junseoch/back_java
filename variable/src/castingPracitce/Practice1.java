@@ -36,8 +36,15 @@ public class Practice1 {
 		
 		// 문자형 -> 문자열
 		char c = '7';
-		String s = c + "";
-		System.out.println(s);   // "7"
+		String str2 = c + "";
+		System.out.println(str2);   // "7"
+		
+		// 문자형 -> 문자열
+		// '2' -> "2"
+		char c2 = '2';
+		
+		String result = String.valueOf(c2);
+		System.out.println(result);
 		
 	}
 }
