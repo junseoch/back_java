@@ -3,6 +3,7 @@ package streamTask;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
@@ -61,13 +62,24 @@ public class StreamTask4 {
 	      
 //	      4) 취미를 3개 이상 가진 사람의 id를 ArrayList로 변경하고 hobbyIds 변수에 담기
 	      
-	      ArrayList<Long> hobbyIds = 
-	    		  members.stream().filter((user) -> user.getHobby().split("_").length >= 3)
-	    		  .map((user) -> user.getId())
-	    		  .collect(Collectors.toCollection(ArrayList::new));
-	      			
-	      System.out.println(members);
-	      System.out.println(hobbyIds);
+//	      ArrayList<Long> hobbyIds = 
+//	    		  members.stream().filter((user) -> user.getHobby().split("_").length >= 3)
+//	    		  .map((user) -> user.getId())
+//	    		  .collect(Collectors.toCollection(ArrayList::new));
+//	      			
+//	      System.out.println(members);
+//	      System.out.println(hobbyIds);
+	      
+	      
+			ArrayList<Long> hobbyIndexs = members
+					.stream()
+					.filter(user -> user.getHobby().split("_").length >= 3)
+					.map(user -> user.getId())
+					.collect(Collectors.toCollection(ArrayList::new));
+				
+			System.out.println(hobbyIndexs);
+			
+				
 	      
 //	      5) hobbyIds에 존재하는 id와 같은 id를 가진 members의 데이터 소개를 출력하기
 	      // 0,1,5번 사용자의 소개 
@@ -90,6 +102,15 @@ public class StreamTask4 {
 	      
 //	      hobbyIds.stream().map((i) -> {members.stream().filter((m) -> m.getId()) ;
 //	      });
+	      
+	      hobbyIndexs
+			.stream()
+			.mapToInt(Long::intValue) // Long -> int - IntStream
+			.mapToObj(Integer::valueOf) // int -> Integer - Stream<Integer>
+			.map(i -> members.get(i))
+			.map(u -> u.getIntroduction())
+			.forEach(System.out::println);
+	      
 	      
 //	      6. 소개를 가장 길게 쓴 사용자의 정보를 문자열로 출력
 //	      예시) 이름 : 흰둥이 소개 : 개발_축구  취미 : 개발도 운동도 잘해요!
@@ -115,6 +136,37 @@ public class StreamTask4 {
 	      
 //		members.stream().reduce();
 //		members.stream().max(n);
+	      
+	  	Member member = members
+				.stream()
+				.max(Comparator.comparingInt(m -> m.getIntroduction().length()))
+				.get();
+				
+			StreamTask4Answer st4 = new StreamTask4Answer();
+			st4.introduce(member);
+			
+			
+//			최대 길이		
+			for(Member m : members) {
+				int length = m.getIntroduction().length(); 
+				if(maxLength < m.getIntroduction().length()) {
+					maxLength = length;
+				}
+			}
+			
+			MaxLength maxClass = new MaxLength();
+			for(Member m : members) {
+				int length = m.getIntroduction().length(); 
+				if( maxClass.getSize() < m.getIntroduction().length()) {
+					maxClass.setSize(length);
+				}
+			}
+			
+//			filter로 걸러낸다
+			members
+				.stream()
+				.filter(m -> m.getIntroduction().length() == maxClass.getSize())
+				.forEach(st4::introduce);
 	      
 	    
 //	    7. 
