@@ -1,4 +1,4 @@
-package hanminTeacher;
+package scanner;
 
 import java.util.Scanner;
 

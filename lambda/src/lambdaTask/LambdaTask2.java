@@ -46,6 +46,28 @@ public class LambdaTask2 {
 		printString.strCount("aabc", 'a');
 		
 		
+		//3) 문자열을 받으면 뒤집은 문자열로 리턴해주는 람다구현 Reverse reverseString()
+		Reverse reverse = (String str) -> {
+			String result = "";
+			for(int i = str.length() - 1; i >= 0; i--) {
+				result += str.charAt(i);
+			}
+			return result;
+		};
+		System.out.println(reverse.reverseString("hello")); // 출력: olleh
+		
+		
+		//4) 문자열과 문자형을 받으면 해당 문자를 모두 지워주는 람다구현 Remove removeStr()
+		Remove remove = (String str, char c) -> {
+			String result = "";
+			for(int i = 0; i < str.length(); i++) {
+				if(str.charAt(i) != c) {
+					result += str.charAt(i);
+				}
+			}
+			return result;
+		};
+		System.out.println(remove.removeStr("banana", 'a'));
 		
 	}
 	

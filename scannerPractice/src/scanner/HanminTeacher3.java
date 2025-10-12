@@ -1,4 +1,4 @@
-package hanminTeacher;
+package scanner;
 
 public class HanminTeacher3 {
 	
